@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const ProductId = ({ data }) => {
+    console.log('daga',data);
   return (
     <>
       <button>
@@ -8,6 +10,9 @@ const ProductId = ({ data }) => {
       </button>
       <h1>{data.title}</h1>
       <p>{data.description}</p>
+      {/* <Image>{data.thumbnail[0]}</Image> */}
+      {/* <Image src={data.thumbnail}/> */}
+      <img src={data.thumbnail}/>
     </>
   );
 };
