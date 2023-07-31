@@ -1,35 +1,16 @@
-// import React from 'react'
-
-// const Layout = ({children}) => {
-//   return (
-// <div className="m-40">
-//   {children}
-//       <h1 className="text-3xl text-cyan-500">
-//         Tailwind CSS 3 with{' '}
-//         <span className="font-sans text-gray-700 shadow-md shadow-cyan-500/30 px-2 py-2 font-light rounded-full">
-//           Next.JS
-//         </span>
-//       </h1>
-//     </div>
-//   )
-// }
-
-// export default Layout;
-
-// *********************
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Layout() {
+const Layout =({children})=> {
   const [navbar, setNavbar] = useState(false);
   return (
     <div>
       <Head>
-        <title>Fahad's eCommerece Website</title>
+        <title>Fahad's eCommerce Website</title>
         <meta
           name="description"
-          content="Create Next JS Responsive Menu with Tailwind CSS"
+          content="Fahad's ecommerce website"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -38,7 +19,7 @@ export default function Layout() {
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               <a href="#">
-                <h2 className="text-2xl text-white font-bold">NEXT JS</h2>
+                <h2 className="text-2xl text-white font-bold">Fahad's EcoM</h2>
               </a>
               <div className="md:hidden">
                 <button
@@ -115,25 +96,10 @@ export default function Layout() {
         </div>
       </nav>
       <div className="flex justify-center items-center mt-8">
-        {/* <h1 className="text-2xl font-bold text-purple-500">
-          Create Responsive Navbar Menu in Next js with Tailwind CSS
-        </h1> */}
         {children}
       </div>
     </div>
   );
 }
 
-// ***************************
-
-// const Layout = ({ children }) => {
-//   return (
-//     <>
-//       <h1>Header</h1>
-//       {children}
-//       <h1>Footer</h1>
-//     </>
-//   );
-// };
-
-// export default Layout;
+export default Layout;
