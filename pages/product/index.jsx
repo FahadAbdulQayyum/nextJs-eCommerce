@@ -1,7 +1,7 @@
-const Index = () => {
+const Product = () => {
   return (
-    <div>Index</div>
+    <div>Product</div>
   )
 }
 
-export default Index
+export default Product

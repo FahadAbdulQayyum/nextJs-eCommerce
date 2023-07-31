@@ -1,8 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const ProductId = ({ data }) => {
-  console.log("daga", data);
+  // console.log("daga", data);
   return (
     <>
       <button>
@@ -26,17 +25,36 @@ export const getStaticProps = async ({ params: { productId } }) => {
 };
 
 export const getStaticPaths = async () => {
+  console.log('getStaticPathssss')
+  const data = await fetch('https://dummyjson.com/products');
+  const res = await data.json();
+  // console.log('ressss',res.products.map(v=>params+':'+v.id.toString()));
+  const pId = res.products.map(v=>{
+    return{ 
+      params: {productId: v.id.toString()}
+    }
+  });
+
+  // console.log('ressss',res.products.map(v=>{
+  //   return{ 
+  //     params: {'productId': v.id.toString()}
+  //   }
+  // }));
+  
+  // const products = res.products.map(v=>{params: {productId: v.id}});
+  // console.log('productssss',products);
   return {
-    paths: [
-      {
-        params: {
-          productId: "1",
-        },
-      },
-    ],
-    // fallback: false,
+    // paths: [
+    //   // {
+    //     // params: {
+    //     //   productId: "1",
+    //     // },
+    //   // },
+    // ],
+    paths: pId,
+    fallback: false,
     // fallback: true,
-    fallback: "blocking",
+    // fallback: "blocking",
   };
 };
 
