@@ -21,6 +21,27 @@
   text-overflow: ellipsis;
 }
 
+/* .carousel {
+  display: flex;
+}
+
+.carousel img {
+  height: 100px;
+} */
+
+
+/* .legend { */
+  /* background-color: red; */
+/* } */
+
+.item {
+  height: 10rem;
+  background: #4dc7a0;
+  padding: 1rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
 /* :root {
   --max-width: 1100px;
   --border-radius: 12px;
