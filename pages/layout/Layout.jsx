@@ -81,13 +81,13 @@ const Layout =({children})=> {
                 <li className="text-white">
                   <Link href="/about">
                     {/* <a>About US</a> */}
-                    <p>About US</p>
+                    <p>About Ua</p>
                   </Link>
                 </li>
                 <li className="text-white">
                   <Link href="/contact">
                     {/* <a>Contact US</a> */}
-                    <p>Contact US</p>
+                    <p>Contact Us</p>
                   </Link>
                 </li>
               </ul>

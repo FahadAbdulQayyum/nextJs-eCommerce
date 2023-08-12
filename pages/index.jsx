@@ -1,10 +1,11 @@
 import Link from "next/link";
 
-import CarouselComp from "./carousel";
+// import CarouselComp from "./carousel";
+import CarouselComp from "./carousel copy";
 
 const Index = ({ data }) => {
 
-  console.log('data', data);
+  // console.log('data', data);
 
   const product = data?.map(p => {
     return (
@@ -30,7 +31,7 @@ const Index = ({ data }) => {
 
   return (
     <div>
-        <CarouselComp />
+        {/* <CarouselComp /> */}
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div className="gridView">
           {product}
