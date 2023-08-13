@@ -3,9 +3,21 @@ import path from 'path';
 
 const pathJson = path.join(process.cwd(), "data", "db.json")
 
-export const comment = body => {
+export const readComment = () => {
     const fsRead = fs.readFileSync(pathJson)
-    fs.writeFileSync(pathJson,JSON.stringify([...JSON.parse(fsRead),body]))
+    return JSON.parse(fsRead);
+}
 
-    console.log('fsRead', JSON.parse(fsRead));
+// export const writeComment = ({name, age}) => {
+export const writeComment = (body) => {
+    const data = readComment();
+    console.log('dataaaa',data);
+    const matched = data.find(u=>u.name === body.name);
+    console.log('matched',matched);
+    if(matched) {
+        throw new Error("This user already exists")
+    }
+    return fs.writeFileSync(pathJson, JSON.stringify([...data,body]))
+
+    // matched ? new Error("This user already exists") : fs.writeFileSync(pathJson, JSON.stringify([...data, body]))
 }
