@@ -8,7 +8,6 @@ export const readComment = () => {
     return JSON.parse(fsRead);
 }
 
-// export const writeComment = ({name, age}) => {
 export const writeComment = (body) => {
     const data = readComment();
     console.log('dataaaa',data);
@@ -18,6 +17,4 @@ export const writeComment = (body) => {
         throw new Error("This user already exists")
     }
     return fs.writeFileSync(pathJson, JSON.stringify([...data,body]))
-
-    // matched ? new Error("This user already exists") : fs.writeFileSync(pathJson, JSON.stringify([...data, body]))
 }

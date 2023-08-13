@@ -9,6 +9,9 @@ const ProductId = ({ data }) => {
       <img src={data.thumbnail} className="my-10"/>
       <h1 className="text-2xl">{data.title}</h1>
       <p className="truncate">{data.description}</p>
+      {/* <input type="text" placeholder="type your comment"/> */}
+      <textarea className="mt-10 border-cyan-500 rounded-xl w-full" placeholder="Enter your comment here"></textarea>
+      <button className="bg-cyan-500 p-2 my-2 w-full text-white rounded-2xl hover:scale-105 ease-in-out duration-200">Submit</button>
     </div>
   );
 };
